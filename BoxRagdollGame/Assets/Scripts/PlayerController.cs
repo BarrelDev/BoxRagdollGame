@@ -32,10 +32,27 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
-            if (Input.GetAxisRaw("Horizontal") > 0) 
+            if (Input.GetAxisRaw("Horizontal") > 0)
             {
                 anim.Play("walk");
+                rb.AddForce(Vector2.right * playerSpeed);
             }
+            else
+            {
+                anim.Play("walkBack");
+                rb.AddForce(Vector2.left * playerSpeed);
+            }
+        }
+        else 
+        {
+            anim.Play("Idle");
+        }
+
+        isGrounded = Physics2D.OverlapCircle(playerPos.position, posistionRadius, ground);
+        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)) 
+        {
+            Debug.Log("jumping");
+            rb.AddForce(Vector2.up * jumpForce);
         }
     }
 }
