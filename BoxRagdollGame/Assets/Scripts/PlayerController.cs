@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log(Input.GetAxis("Horizontal").ToString());
         if (Input.GetAxisRaw("Horizontal") != 0)
         {
             if (Input.GetAxisRaw("Horizontal") > 0)
@@ -45,7 +46,7 @@ public class PlayerController : MonoBehaviour
         }
         else 
         {
-            anim.Play("Idle");
+            anim.Play("idle");
         }
 
         isGrounded = Physics2D.OverlapCircle(playerPos.position, posistionRadius, ground);

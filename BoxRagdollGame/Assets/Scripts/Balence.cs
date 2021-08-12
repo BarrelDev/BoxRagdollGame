@@ -10,6 +10,9 @@ public class Balence : MonoBehaviour
 
     public void Update()
     {
-        rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRotation, force * Time.fixedDeltaTime));
+        if (rb.rotation != targetRotation) 
+        {
+            rb.MoveRotation(Mathf.LerpAngle(rb.rotation, targetRotation, force * Time.fixedDeltaTime));
+        }
     }
 }

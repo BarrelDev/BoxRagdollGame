@@ -368,7 +368,7 @@ MonoBehaviour:
   anim: {fileID: 407487709}
   rb: {fileID: 486639584}
   jumpForce: 5000
-  playerSpeed: 10
+  playerSpeed: 15
   jumpHeight: {x: 0, y: 0}
   posistionRadius: 0.3
   ground:
