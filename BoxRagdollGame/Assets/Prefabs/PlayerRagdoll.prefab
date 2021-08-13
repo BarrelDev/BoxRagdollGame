@@ -1498,7 +1498,7 @@ MonoBehaviour:
   jumpForce: 990000
   playerSpeed: 10000
   jumpHeight: {x: 0, y: 0}
-  posistionRadius: 0.3
+  posistionRadius: 0.5
   ground:
     serializedVersion: 2
     m_Bits: 8
