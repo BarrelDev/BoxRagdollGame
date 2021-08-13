@@ -6,6 +6,7 @@ public class Grab : MonoBehaviour
 {
     private bool hold;
     public KeyCode mouseButton;
+    public GameObject grabParticles;
     void Update()
     {
         if (Input.GetKey(mouseButton))
@@ -30,6 +31,8 @@ public class Grab : MonoBehaviour
                 if (rb != null)
                 {
                     FixedJoint2D fj = transform.gameObject.AddComponent(typeof(FixedJoint2D)) as FixedJoint2D;
+                    grabParticles.transform.position = rb.position;
+                    grabParticles.GetComponent<ParticleSystem>().Play();
                     fj.connectedBody = rb;
                 }
                 else
