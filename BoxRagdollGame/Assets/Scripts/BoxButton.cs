@@ -7,37 +7,38 @@ public class BoxButton : MonoBehaviour
     public bool isPushed;
     public Animator boxButtonAnim;
 
-    void Update()
+    void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log(isPushed.ToString());
-        
-    }
-
-    void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.tag == "Grabbable")
+        Debug.Log(col.gameObject.name.ToString());
+        if (col.gameObject.CompareTag("Grabbable"))
         {
             boxButtonAnim.Play("pushDown");
+            Debug.Log("pushDown");
             isPushed = true;
         }
         else 
         {
+            Debug.Log("idle");
             boxButtonAnim.Play("idle");
             isPushed = false;
         }
     }
 
-    void OnCollisionExit2D(Collision2D col)
+    void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.tag == "Grabbable")
+        Debug.Log(col.gameObject.name.ToString());
+        if (col.gameObject.CompareTag("Grabbable"))
         {
+            Debug.Log("pushUp");
             boxButtonAnim.Play("pushUp");
             isPushed = false;
         }
         else 
         {
+            Debug.Log("idle");
             boxButtonAnim.Play("idle");
             isPushed = false;
         }
     }
+
 }
