@@ -2,43 +2,40 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoxButton : MonoBehaviour
+public class EndButton : MonoBehaviour
 {
     public bool isPushed;
-    public Animator boxButtonAnim;
+    public Animator endButtonAnim;
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //Debug.Log(col.gameObject.name.ToString());
-        if (col.gameObject.CompareTag("Grabbable"))
+        if (col.gameObject.name =="RightHand") 
         {
-            boxButtonAnim.Play("pushDown");
+            endButtonAnim.Play("pushDown");
             Debug.Log("pushDown");
             isPushed = true;
         }
-        else 
+        else
         {
             Debug.Log("idle");
-            boxButtonAnim.Play("idle");
+            endButtonAnim.Play("idle");
             isPushed = false;
         }
     }
 
     void OnTriggerExit2D(Collider2D col)
     {
-        //Debug.Log(col.gameObject.name.ToString());
-        if (col.gameObject.CompareTag("Grabbable"))
+        if (col.gameObject.name == "RightHand")
         {
             Debug.Log("pushUp");
-            boxButtonAnim.Play("pushUp");
+            endButtonAnim.Play("pushUp");
             isPushed = false;
         }
-        else 
+        else
         {
             Debug.Log("idle");
-            boxButtonAnim.Play("idle");
+            endButtonAnim.Play("idle");
             isPushed = false;
         }
     }
-
 }
