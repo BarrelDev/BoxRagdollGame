@@ -9,7 +9,8 @@ public class EndButton : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name =="RightHand") 
+        //Debug.Log(col.gameObject.name.ToString());
+        if (col.gameObject.CompareTag("Player")) 
         {
             endButtonAnim.Play("pushDown");
             Debug.Log("pushDown");
@@ -25,7 +26,8 @@ public class EndButton : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        if (col.gameObject.name == "RightHand")
+        //Debug.Log(col.gameObject.name.ToString());
+        if (col.gameObject.CompareTag("Player"))
         {
             Debug.Log("pushUp");
             endButtonAnim.Play("pushUp");

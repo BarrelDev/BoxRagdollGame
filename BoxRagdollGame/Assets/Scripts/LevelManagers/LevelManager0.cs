@@ -18,7 +18,7 @@ public class LevelManager0 : MonoBehaviour
         LevelFlag1 = false;
     }
 
-    void Update()
+    void Update()   
     {
         if (boxButton.isPushed && !LevelFlag0) 
         {
@@ -30,6 +30,8 @@ public class LevelManager0 : MonoBehaviour
         if (endButton.isPushed && !LevelFlag1)
         {
             exitDoor.Play("open");
+            Debug.Log("open");
+            LevelFlag1 = true;
         }
     }
 }

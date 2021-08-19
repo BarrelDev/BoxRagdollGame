@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8725328106057680692}
   m_Layer: 0
   m_Name: RightHand
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1498,7 +1498,7 @@ MonoBehaviour:
   jumpForce: 990000
   playerSpeed: 10000
   jumpHeight: {x: 0, y: 0}
-  posistionRadius: 0.5
+  posistionRadius: 0.25
   ground:
     serializedVersion: 2
     m_Bits: 8

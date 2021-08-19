@@ -78,6 +78,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: exitDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 990041655627605097, guid: 4107c224266574c4396732572f88017d, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 990041655627605099, guid: 4107c224266574c4396732572f88017d, type: 3}
       propertyPath: m_Constraints
       value: 4
