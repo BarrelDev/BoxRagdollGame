@@ -1,0 +1,12 @@
+Hey there!
+
+If you're a dataminer or some kinda person looking for unused files this is for you.
+Although this isn't exactly great for me, I hope you find something interesting in here!
+I do request that you don't outright copy my game and pass it around illegally but I have no control over that.
+
+Well I'll at least keep some cool facts about any unused content I leave behind.
+
+"Square.png" - located at /Assets/Textures/
+	This is a placeholder asset for testing out ideas or concepts, before sprites are made.
+
+Barrel 8/19/21 - "Is Anyone Gonna see this?"
