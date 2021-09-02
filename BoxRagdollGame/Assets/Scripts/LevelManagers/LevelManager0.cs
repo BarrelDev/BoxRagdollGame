@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelManager0 : MonoBehaviour
 {
@@ -9,29 +10,46 @@ public class LevelManager0 : MonoBehaviour
     public GameObject platform;
     public GameObject acid;
     public Animator exitDoor;
-    private bool LevelFlag0;
-    private bool LevelFlag1;
+    public Animator levelFade;
+    private bool HasCrossedAcid;
+    private bool PressedEndButton;
+    private int nextLevel;
 
     void Start()
     {
-        LevelFlag0 = false;
-        LevelFlag1 = false;
+        HasCrossedAcid = false;
+        PressedEndButton = false;
     }
 
     void Update()   
     {
-        if (boxButton.isPushed && !LevelFlag0) 
+        if (boxButton.isPushed && !HasCrossedAcid) 
         {
             platform.transform.position = new Vector2(acid.transform.position.x-10f, acid.transform.position.y);
             Rigidbody2D pRB = platform.GetComponent<Rigidbody2D>();
             pRB.AddForce(new Vector2(0f, 5f));
-            LevelFlag0 = true;
+            HasCrossedAcid = true;
         }
-        if (endButton.isPushed && !LevelFlag1)
+        if (endButton.isPushed && !PressedEndButton)
         {
             exitDoor.Play("open");
             Debug.Log("open");
-            LevelFlag1 = true;
+            PressedEndButton = true;
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+    }
+    public void FadeToLevel(int levelIndex)
+    {
+        nextLevel = levelIndex;
+        levelFade.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete() 
+    {
+        SceneManager.LoadScene(nextLevel);
     }
 }

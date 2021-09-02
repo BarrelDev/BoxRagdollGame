@@ -1495,8 +1495,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8725328107967289640}
   rb: {fileID: 8725328108054862357}
-  jumpForce: 990000
-  playerSpeed: 10000
+  jumpForce: 100
+  playerSpeed: 5000
   jumpHeight: {x: 0, y: 0}
   posistionRadius: 0.25
   ground:

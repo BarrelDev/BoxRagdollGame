@@ -57,8 +57,8 @@ public class PlayerController : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(playerPos.position, posistionRadius, ground);
         if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)) 
         {
-            Debug.Log("jumping");
-            rb.AddForce(Vector2.up * jumpForce * Time.deltaTime);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            Debug.Log(Vector2.up * jumpForce);
         }
     }
 }
