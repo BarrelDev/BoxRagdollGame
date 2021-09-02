@@ -11,9 +11,9 @@ public class LevelManager0 : MonoBehaviour
     public GameObject acid;
     public Animator exitDoor;
     public Animator levelFade;
+    public LevelChanger levelChanger;
     private bool HasCrossedAcid;
     private bool PressedEndButton;
-    private int nextLevel;
 
     void Start()
     {
@@ -40,16 +40,7 @@ public class LevelManager0 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        levelChanger.FadeToLevel(1);
     }
-    public void FadeToLevel(int levelIndex)
-    {
-        nextLevel = levelIndex;
-        levelFade.SetTrigger("FadeOut");
-    }
-
-    public void OnFadeComplete() 
-    {
-        SceneManager.LoadScene(nextLevel);
-    }
+    
 }
