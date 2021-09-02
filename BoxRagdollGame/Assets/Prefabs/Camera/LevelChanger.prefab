@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8643516841324592654}
   - component: {fileID: 8643516841324592655}
   - component: {fileID: 8643516841324592651}
+  - component: {fileID: 143029116676307515}
   m_Layer: 5
   m_Name: LevelChanger
   m_TagString: Untagged
@@ -120,6 +121,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &143029116676307515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8643516841324592656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68526d21f0127c14088b6f0d0ab7f46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 0}
 --- !u!1 &8643516842579217829
 GameObject:
   m_ObjectHideFlags: 0

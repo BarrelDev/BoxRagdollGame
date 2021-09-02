@@ -323,6 +323,7 @@ MonoBehaviour:
   acid: {fileID: 2132563673}
   exitDoor: {fileID: 590106302}
   levelFade: {fileID: 1379086428}
+  levelChanger: {fileID: 1379086432}
 --- !u!4 &92257314
 Transform:
   m_ObjectHideFlags: 0
@@ -56275,6 +56276,17 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 8643516841324592651, guid: d913dee42a58b4c479822de12a23ca3a, type: 3}
   m_PrefabInstance: {fileID: 8643516841024951583}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1379086432 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 143029116676307515, guid: d913dee42a58b4c479822de12a23ca3a, type: 3}
+  m_PrefabInstance: {fileID: 8643516841024951583}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68526d21f0127c14088b6f0d0ab7f46b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1383304053
 GameObject:
   m_ObjectHideFlags: 0
@@ -57240,6 +57252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 92257314}
     m_Modifications:
+    - target: {fileID: 143029116676307515, guid: d913dee42a58b4c479822de12a23ca3a, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 1379086428}
     - target: {fileID: 8643516841324592652, guid: d913dee42a58b4c479822de12a23ca3a, type: 3}
       propertyPath: m_Pivot.x
       value: 0
