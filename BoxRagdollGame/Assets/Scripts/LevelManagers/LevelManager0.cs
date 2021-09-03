@@ -38,9 +38,9 @@ public class LevelManager0 : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D col)
     {
+        col.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0f,0f);
         levelChanger.FadeToLevel(1);
     }
-    
 }

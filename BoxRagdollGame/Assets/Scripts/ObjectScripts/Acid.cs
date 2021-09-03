@@ -7,10 +7,15 @@ public class Acid : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name == "Hips")
+        GameObject collided = col.gameObject;
+        if (collided.name == "Hips")
         {
-            col.gameObject.GetComponent<Balence>().enabled = false;
-            col.gameObject.GetComponentInParent<PlayerController>().enabled = false;
+            collided.GetComponent<Balence>().enabled = false;
+            collided.GetComponentInParent<PlayerController>().enabled = false;
+            collided.GetComponent<Animator>().Play("idle");
+            GameObject parent = col.gameObject.transform.parent.gameObject;
+            parent.GetComponentInChildren<Arms>().enabled = false;
+            parent.GetComponentInChildren<Grab>().enabled = false;
         }
     }
 }
