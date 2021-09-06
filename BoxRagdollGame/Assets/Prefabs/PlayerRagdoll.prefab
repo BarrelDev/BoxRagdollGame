@@ -1495,14 +1495,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 8725328107967289640}
   rb: {fileID: 8725328108054862357}
-  jumpForce: 100
-  playerSpeed: 5000
   jumpHeight: {x: 0, y: 0}
-  posistionRadius: 0.25
   ground:
     serializedVersion: 2
     m_Bits: 8
+  wall:
+    serializedVersion: 2
+    m_Bits: 64
   playerPos: {fileID: 8725328107995615984}
+  jumpForce: 100
+  playerSpeed: 5000
+  posistionRadius: 0.25
 --- !u!1 &8725328107995615985
 GameObject:
   m_ObjectHideFlags: 0
@@ -1527,7 +1530,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8725328107995615985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -24.1, z: 0}
+  m_LocalPosition: {x: 0, y: -27.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8725328108054862353}

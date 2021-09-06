@@ -6,13 +6,16 @@ public class PlayerController : MonoBehaviour
 {
     public Animator anim;
     public Rigidbody2D rb;
+    public Vector2 jumpHeight;
+    public LayerMask ground;
+    public LayerMask wall;
+    public Transform playerPos;
     public float jumpForce;
     public float playerSpeed;
-    public Vector2 jumpHeight;
-    private bool isGrounded;
     public float posistionRadius;
-    public LayerMask ground;
-    public Transform playerPos;
+
+    private bool isGrounded;
+    private bool isWall;
 
     // Start is called before the first frame update
     void Start()
@@ -55,10 +58,14 @@ public class PlayerController : MonoBehaviour
         }
 
         isGrounded = Physics2D.OverlapCircle(playerPos.position, posistionRadius, ground);
-        if(isGrounded == true && Input.GetKeyDown(KeyCode.Space)) 
+        isWall = Physics2D.OverlapCircle(playerPos.position, posistionRadius, wall);
+        if(isGrounded && Input.GetKeyDown(KeyCode.Space)) 
         {
-            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-            Debug.Log(Vector2.up * jumpForce);
+            if (!isWall) 
+            {
+                rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+                Debug.Log(Vector2.up * jumpForce);
+            }
         }
     }
 }
