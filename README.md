@@ -1,2 +1,2 @@
 # BoxRagdollGame
-A game I'm working on, with Ragdolls and Boxes!
+A prototype game involving a ragdoll which can grab a box.
